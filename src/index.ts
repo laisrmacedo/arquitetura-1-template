@@ -17,6 +17,8 @@ const accountController = new AccountController()
 
 app.get("/users", userController.getUsers)
 app.post("/users", userController.createUser)
+app.put("/users/:id", userController.editUser)
+
 
 app.get("/accounts", accountController.getAccounts)
 app.get("/accounts/:id/balance", accountController.getAccountBalance)

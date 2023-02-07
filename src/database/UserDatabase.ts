@@ -36,4 +36,11 @@ export class UserDatabase extends BaseDatabase {
             .connection(UserDatabase.TABLE_USERS)
             .insert(newUserDB)
     }
+
+    public async updateUser(idToEdit:string, user: UserDB) {
+        await BaseDatabase
+            .connection(UserDatabase.TABLE_USERS)
+            .update(user)
+            .where({id: idToEdit})
+    }
 }
