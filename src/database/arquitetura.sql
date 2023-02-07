@@ -1,4 +1,4 @@
--- Active: 1675254981881@@127.0.0.1@3306
+-- Active: 1675686445994@@127.0.0.1@3306
 CREATE TABLE users (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     name TEXT NOT NULL,
@@ -6,6 +6,8 @@ CREATE TABLE users (
     password TEXT NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL
 );
+
+SELECT * FROM users;
 
 CREATE TABLE accounts (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
